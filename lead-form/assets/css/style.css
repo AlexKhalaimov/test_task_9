@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap');
+
+body {
+}
+
+form {
+	max-width: 400px;
+	margin: 20px auto;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input, textarea {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+button:disabled {
+	background-color: grey;
+	cursor: not-allowed;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+	background-color: #fff;
+	margin: 15% auto;
+	padding: 50px 22px;
+	border-radius: 16px;
+	max-width: 550px;
+	width: 100%;
+	position: relative;
+}
+.modal-content__body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.modal-content__figure {
+	width: 62px;
+	height: 62px;
+	background-color: #A7C5DF;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 10px;
+}
+.modal-content__message {
+	font-family: "Inter Tight", sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+	color: #13121E;
+	margin:0 0 30px;
+	text-align: center;
+}
+.modal-content__heading {
+	font-family: "Inter Tight", sans-serif;
+	text-align: center;
+	color: #13121E;
+	font-size: 40px;
+	font-weight: 600;
+	margin: 0;
+	line-height: 50px;
+}
+
+.modal-content__close {
+	font-family: "Inter Tight", sans-serif;
+	color: #6F6F72;
+	font-size: 13px;
+	font-weight: 500;
+	position: absolute;
+	right: 25px;
+	top: 25px;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	padding: 0;
+	background-color: transparent;
+}
+.modal-content__close-cross {
+	font-size: 50px;
+	font-weight: 100;
+	line-height: 15px;
+	display: inline-block;
+	transform: translateY(-3px);
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+.lead-form-wrapper {
+	font-family: "Inter", sans-serif;
+	box-sizing: border-box;
+	border: 1px solid #E7E2F4;
+	border-radius: 16px;
+	padding: 30px;
+	background-color: #FFFFFF;
+	max-width: 400px;
+	margin: 0 auto;
+}
+.lead-form {
+
+}
+.lead-form__heading {
+	font-weight: 600;
+	color: #212227;
+	text-align: center;
+	font-size: 22px;
+	line-height: 26px;
+	font-family: inherit;
+}
+.lead-form__group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 12px;
+}
+.lead-form__label {
+	font-weight: 500;
+	color: #212227;
+}
+.lead-form__textarea {
+	border-radius: 8px;
+	border: 1px solid #8A8E91;
+	resize: none;
+}
+.lead-form__textarea::placeholder {
+	transform: translateY(40px);
+	color: #8A8E91;
+	font-size: 15px;
+	font-weight: 500;
+	font-family: "Inter Tight", sans-serif;
+}
+.lead-form__input {
+	border-radius: 8px;
+	border: 1px solid #8A8E91;
+	padding: 14px 18px;
+}
+.lead-form__input::placeholder {
+	color: #8A8E91;
+	font-size: 15px;
+	font-weight: 500;
+	font-family: "Inter Tight", sans-serif;
+}
+.lead-form__input.has-error {
+	border-color: #F0392D;
+}
+.lead-form__submit {
+	font-family: "Inter Tight", sans-serif;
+	background-color: #F2512E;
+	color: #F4F1FF;
+	font-size: 15px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 8px;
+}
+.lead-form__submit-text {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	&::before {
+		content: '';
+		display: inline-flex;
+		width: 8px;
+		height: 8px;
+		background-color: #E8FB87;
+		border-radius: 50%;
+		margin-right: 10px;
+	}
+}
+.lead-form__error-message {
+	font-family: "Inter Tight", sans-serif;
+	color: #C42C17;
+	font-size: 11px;
+	font-weight: 500;
+}
+.lead-form__agreement {
+	font-size: 12px;
+	font-weight: 400;
+	max-width: 210px;
+	margin-top: 16px;
+	margin-inline: auto;
+}
+.lead-form__agreement a {
+	text-decoration: underline;
+	font-weight: 500;
+}
+.lead-form__submit-spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 4px solid rgba(0, 0, 0, 0.1);
+	border-top: 4px solid #3498db;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	animation: spin 2s linear infinite;
+	display: none;
+}
+
+@keyframes spin {
+	0% { transform: translate(-50%, -50%) rotate(0deg); }
+	100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.text-hidden {
+	visibility: hidden;
+}
+.modal-content__error-container {
+	display: none;
+}
